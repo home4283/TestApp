@@ -25,7 +25,11 @@
         <activity android:name=".place" />
         <activity android:name=".hotel" />
         <activity android:name=".bus" />
-        <activity android:name=".park"></activity>
+        <activity android:name=".park" />
+        <activity android:name=".fg_place" />
+        <activity android:name=".fg_hotel" />
+        <activity android:name=".fg_bus" />
+        <activity android:name=".fg_park"></activity>
     </application>
 
 </manifest>

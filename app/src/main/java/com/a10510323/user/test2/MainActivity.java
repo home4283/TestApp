@@ -57,27 +57,32 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
-                intent.setClass(MainActivity.this, bus.class);
+                intent.setClass(MainActivity.this, place.class);
                 startActivity(intent);
-
             }
         });
         imb2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, hotel.class);
+                startActivity(intent);
             }
         });
         imb3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, bus.class);
+                startActivity(intent);
             }
         });
         imb4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, park.class);
+                startActivity(intent);
             }
         });
     }
