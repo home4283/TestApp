@@ -77,6 +77,8 @@ public class fg_bus extends Fragment{
                 wb.loadUrl(buslistgo.get(i));
                 WebSettings webSettings = wb.getSettings();
                 webSettings.setJavaScriptEnabled(true);
+                webSettings.setSupportZoom(true);
+                webSettings.setBuiltInZoomControls(true);
                 wb.setInitialScale(100);
                 wb.setWebViewClient(new WebViewClient());
                 wb.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
