@@ -8,8 +8,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+
+import java.util.ArrayList;
 
 public class fg_bus extends Fragment{
+    private Spinner buslist;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -18,5 +23,9 @@ public class fg_bus extends Fragment{
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         View v = getView();
+        buslist = v.findViewById(R.id.buslist);
+
+        ArrayAdapter<CharSequence>list = ArrayAdapter.createFromResource(getActivity(),R.array.bus,android.R.layout.simple_spinner_dropdown_item);
+        buslist.setAdapter(list);
     }
 }

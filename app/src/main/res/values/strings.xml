@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">test2</string>
+
+    <string-array name="bus">
+        <item>862</item><item>862(台灣好行皇冠北海岸旅遊)</item>
+        <item>863</item><item>790</item>
+        <item>790(漁港)</item><item>1068(台灣大學)</item>
+        <item>1717(台北車站)</item><item>953(板橋)</item>
+        <item>台灣好行龍宮尋寶線T99號</item><item>F921</item>
+        <item>F921假日</item><item>F922內崁</item>
+        <item>F922烏塗炭</item><item>F923</item>
+        <item>F923假日</item><item>F933</item>
+        <item>F933-08:00</item><item>F933專車</item>
+        <item>F931-06:00</item><item>F931-07:00</item>
+        <item>F931-08:00</item><item>F931-09:10</item>
+        <item>F931-10:30</item><item>F931-12:55</item>
+        <item>F931-16:30</item><item>F931-17:30</item>
+        <item>F932-06:00</item><item>F932-06:30</item>
+        <item>F932-07:30</item><item>F932-08:20</item>
+        <item>F932-09:50</item><item>F932-11:10</item>
+        <item>F932-13:00</item>
+    </string-array>
 </resources>
