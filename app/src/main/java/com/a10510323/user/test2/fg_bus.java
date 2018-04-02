@@ -73,7 +73,7 @@ public class fg_bus extends Fragment{
         buslist.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, final int i, long l) {
-                buslist.getItemIdAtPosition(i);
+                //buslist.getItemIdAtPosition(i);
                 wb.loadUrl(buslistgo.get(i));
                 WebSettings webSettings = wb.getSettings();
                 webSettings.setJavaScriptEnabled(true);
