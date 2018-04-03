@@ -18,25 +18,21 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class fg_place extends Fragment{
+    private View fragment;
     private RecyclerView rv_place;
     private CardView cvplace_card_view;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_fg_place, container, false);
-
-    }
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        final View v = getView();
-        rv_place = v.findViewById(R.id.rv_place);
-        cvplace_card_view = v.findViewById(R.id.place_card_view);
+        fragment = inflater.inflate(R.layout.activity_fg_place, container, false);
+        rv_place = fragment.findViewById(R.id.place_card_view);
+        cvplace_card_view = fragment.findViewById(R.id.place_card_view);
         LinearLayoutManager manager = new LinearLayoutManager(getActivity());
-
         ArrayList<item> itemList = placedata();
         ItemAdapter adapter = new ItemAdapter(getContext(),itemList);
         rv_place.setAdapter(adapter);
         rv_place.setHasFixedSize(true);
+        return fragment;
     }
     private ArrayList<item> placedata(){
         ArrayList<item> place = new ArrayList<>();
@@ -72,5 +68,17 @@ public class fg_place extends Fragment{
         }
         return place;
     }
+    //public void onActivityCreated(Bundle savedInstanceState) {
+        //super.onActivityCreated(savedInstanceState);
+        //final View v = getView();
+        //rv_place = v.findViewById(R.id.rv_place);
+        //cvplace_card_view = v.findViewById(R.id.place_card_view);
+        //LinearLayoutManager manager = new LinearLayoutManager(getActivity());
+        //rv_place.setHasFixedSize(true);
+        //ArrayList<item> itemList = placedata();
+        //ItemAdapter adapter = new ItemAdapter(getContext(),itemList);
+        //rv_place.setAdapter(adapter);
+
+    //}
 }
 
