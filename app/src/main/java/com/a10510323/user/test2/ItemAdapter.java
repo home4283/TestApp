@@ -31,9 +31,9 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
     @Override
     public void onBindViewHolder(@NonNull ItemViewHolder holder, int position) {
         item Item = itemList.get(position);
-        holder.im_place.setImageResource(Item.place_img);
-        holder.tvcontent_place.setText(Item.place_context);
-        holder.tvtitle_place.setText(Item.place_title);
+        holder.im_place.setImageResource(Item.getPlace_img());
+        holder.tvcontent_place.setText(Item.getPlace_context());
+        holder.tvtitle_place.setText(Item.getPlace_title());
 
     }
 
