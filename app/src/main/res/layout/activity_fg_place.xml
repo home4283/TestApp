@@ -7,4 +7,10 @@
     android:orientation="vertical"
     tools:context=".fg_place">
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_place"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
+
 </LinearLayout>

@@ -20,16 +20,17 @@ import java.util.ArrayList;
 public class fg_place extends Fragment{
     private View fragment;
     private RecyclerView rv_place;
-    private CardView cvplace_card_view;
+    //private CardView cvplace_card_view;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         fragment = inflater.inflate(R.layout.activity_fg_place, container, false);
-        rv_place = fragment.findViewById(R.id.place_card_view);
-        cvplace_card_view = fragment.findViewById(R.id.place_card_view);
+        rv_place = fragment.findViewById(R.id.rv_place);
+        //cvplace_card_view = fragment.findViewById(R.id.place_card_view);
         LinearLayoutManager manager = new LinearLayoutManager(getActivity());
+        rv_place.setLayoutManager(new LinearLayoutManager(getActivity()));
         ArrayList<item> itemList = placedata();
-        ItemAdapter adapter = new ItemAdapter(getContext(),itemList);
+        ItemAdapter adapter = new ItemAdapter(getActivity(),itemList);
         rv_place.setAdapter(adapter);
         rv_place.setHasFixedSize(true);
         return fragment;
