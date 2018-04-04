@@ -1,6 +1,11 @@
 package com.a10510323.user.test2;
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -30,10 +35,25 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull ItemViewHolder holder, int position) {
-        item Item = itemList.get(position);
+        final item Item = itemList.get(position);
         holder.im_place.setImageResource(Item.getPlace_img());
         holder.tvcontent_place.setText(Item.getPlace_context());
         holder.tvtitle_place.setText(Item.getPlace_title());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, Place2.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("title",Item.getPlace_title());
+                bundle.putString("content",Item.getPlace_context());
+                bundle.putInt("img",Item.getPlace_img());
+                bundle.putString("address",Item.getplace_address());
+                bundle.putDouble("double1",Item.getDouble1());
+                bundle.putDouble("double2",Item.getDouble2());
+                intent.putExtras(bundle);
+                context.startActivity(intent);
+            }
+        });
 
     }
 

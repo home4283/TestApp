@@ -31,4 +31,31 @@ public class item implements Serializable{
         return this.place_img;
     }
 
+    private String place_address;
+    public void setplace_address(String place_address){
+        this.place_address = place_address;
+    }
+
+    public String getplace_address(){
+        return this.place_address;
+    }
+
+    private double double1;
+    public void setDouble1(double double1){
+        this.double1 = double1;
+    }
+
+    public double getDouble1(){
+        return this.double1;
+    }
+
+    private double double2;
+    public void setDouble2(double double2){
+        this.double2 = double2;
+    }
+
+    public double getDouble2(){
+        return this.double2;
+    }
+
 }

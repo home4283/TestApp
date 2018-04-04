@@ -5,7 +5,6 @@
     android:layout_gravity="center"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="1dp"
     app:cardCornerRadius="6dp"
     app:cardElevation="10dp"
     app:cardUseCompatPadding="true"
@@ -26,6 +25,8 @@
             android:id="@+id/tvtitle_place"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:textAlignment="textStart"
             android:textColor="#000"
             android:textSize="18dp"
             android:text="標題" />
@@ -34,6 +35,10 @@
             android:id="@+id/tvcontent_place"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:layout_margin="7dp"
+            android:layout_marginLeft="5dp"
+            android:lineSpacingMultiplier="1.2"
             android:textColor="#000"
             android:textSize="14dp"
             android:text="內文" />

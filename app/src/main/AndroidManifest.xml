@@ -29,7 +29,11 @@
         <activity android:name=".fg_place" />
         <activity android:name=".fg_hotel" />
         <activity android:name=".fg_bus" />
-        <activity android:name=".fg_park"></activity>
+        <activity android:name=".fg_park" />
+        <activity android:name=".Place2"></activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDeS4r7ssPxGhX-btgvQMWwiS3dFNecA7Q"/>
     </application>
 
 </manifest>

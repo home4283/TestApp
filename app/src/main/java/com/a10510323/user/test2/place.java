@@ -17,6 +17,8 @@ public class place extends AppCompatActivity {
     private fg_hotel Fg_hotel = new fg_hotel();
     private fg_bus Fg_bus = new fg_bus();
     private fg_park Fg_park = new fg_park();
+    private NavigationTabBar navigationTabBar;
+    public ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +27,12 @@ public class place extends AppCompatActivity {
         initUI();
     }
 
-    private void initUI(){
-        ViewPager viewPager = findViewById(R.id.ViewPager_place);
+    public void changePage(int position) {
+        navigationTabBar.setViewPager(viewPager, position);
+    }
+
+    public void initUI(){
+        viewPager = findViewById(R.id.ViewPager_place);
         viewPager.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
             @Override
             public int getCount() {
@@ -37,27 +43,19 @@ public class place extends AppCompatActivity {
             public Fragment getItem(int position) {
                 switch (position) {
                     case 0:
-                        {
                         return Fg_place;
-                    }
                     case 1:
-                    {
                         return Fg_hotel;
-                    }
                     case 2:
-                    {
                         return Fg_bus;
-                    }
                     case 3:
-                    {
                         return Fg_park;
-                    }
                 }
                     return null;
                 }
             });
         String[] colors = getResources().getStringArray(R.array.default_preview);
-        final NavigationTabBar navigationTabBar = findViewById(R.id.ntb_horizontal0);
+        navigationTabBar = findViewById(R.id.ntb_horizontal0);
         ArrayList<NavigationTabBar.Model>models = new ArrayList<>();
         models.add(new NavigationTabBar.Model.Builder(
                 getResources().getDrawable(R.drawable.u1),
@@ -76,7 +74,7 @@ public class place extends AppCompatActivity {
                 Color.parseColor(colors[3])).title("停車場").badgeTitle("park")
                 .build());
         navigationTabBar.setModels(models);
-        navigationTabBar.setViewPager(viewPager, 0);
+        changePage(0);
         navigationTabBar.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -108,7 +106,5 @@ public class place extends AppCompatActivity {
                 }
             }
         }, 500);
-
     }
-
 }
