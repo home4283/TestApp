@@ -7,6 +7,8 @@
 
     <!-- if you want to load images from a file OR from the internet -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -30,10 +32,14 @@
         <activity android:name=".fg_hotel" />
         <activity android:name=".fg_bus" />
         <activity android:name=".fg_park" />
-        <activity android:name=".Place2"></activity>
+        <activity android:name=".Place2" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDeS4r7ssPxGhX-btgvQMWwiS3dFNecA7Q"/>
+            android:value="AIzaSyDeS4r7ssPxGhX-btgvQMWwiS3dFNecA7Q" />
+
+        <activity android:name=".hotel2" />
+        <activity android:name=".park2"></activity>
     </application>
 
 </manifest>
