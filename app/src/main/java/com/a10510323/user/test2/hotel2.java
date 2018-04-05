@@ -13,9 +13,6 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapView;
-import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -76,7 +73,6 @@ public class hotel2 extends AppCompatActivity implements OnMapReadyCallback {
         googleMap.addMarker(new MarkerOptions().position(sydeny).title(title));
         gmap.setMaxZoomPreference(64);
         UiSettings uiSettings = gmap.getUiSettings();
-        uiSettings.setIndoorLevelPickerEnabled(true);
         uiSettings.setMyLocationButtonEnabled(true);
         uiSettings.setMapToolbarEnabled(true);
         uiSettings.setCompassEnabled(true);

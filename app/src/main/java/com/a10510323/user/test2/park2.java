@@ -8,22 +8,22 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
-import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class park2 extends AppCompatActivity implements OnMapReadyCallback {
+public class park2 extends AppCompatActivity implements OnMapReadyCallback{
 
     private String title;
     private Double double1;
     private Double double2;
     private GoogleMap gmap;
     private MapView mapView;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,10 +45,11 @@ public class park2 extends AppCompatActivity implements OnMapReadyCallback {
         String address = bundle.getString("address");
         Integer img = bundle.getInt("img");
 
-        tvTitle.setText("停車場名稱:"+title);
-        tvContent.setText(content);
+        tvTitle.setText("旅館:"+title);
+        tvContent.setText("簡介:"+content);
         parkImg.setImageResource(img);
         tvAddress.setText("地址:"+address);
+
         Bundle mapViewBundle = null;
         mapView.onCreate(mapViewBundle);
         mapView.getMapAsync(this);
@@ -58,6 +59,7 @@ public class park2 extends AppCompatActivity implements OnMapReadyCallback {
                 double endLatitude = double1;
                 double endLongitude = double2;
                 Uri uri = Uri.parse("google.navigation:q="+endLatitude+","+endLongitude);
+
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 intent.setPackage("com.google.android.apps.maps");
                 startActivity(intent);
@@ -73,11 +75,11 @@ public class park2 extends AppCompatActivity implements OnMapReadyCallback {
         googleMap.addMarker(new MarkerOptions().position(sydeny).title(title));
         gmap.setMaxZoomPreference(64);
         UiSettings uiSettings = gmap.getUiSettings();
-        uiSettings.setIndoorLevelPickerEnabled(true);
         uiSettings.setMyLocationButtonEnabled(true);
         uiSettings.setMapToolbarEnabled(true);
         uiSettings.setCompassEnabled(true);
         uiSettings.setZoomControlsEnabled(true);
         gmap.moveCamera(CameraUpdateFactory.newLatLng(sydeny));
+
     }
 }

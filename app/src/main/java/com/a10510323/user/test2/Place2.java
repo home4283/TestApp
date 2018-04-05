@@ -133,7 +133,6 @@ public class Place2 extends AppCompatActivity implements OnMapReadyCallback{
         googleMap.addMarker(new MarkerOptions().position(sydeny).title(title));
         gmap.setMaxZoomPreference(64);
         UiSettings uiSettings = gmap.getUiSettings();
-        uiSettings.setIndoorLevelPickerEnabled(true);
         uiSettings.setMyLocationButtonEnabled(true);
         uiSettings.setMapToolbarEnabled(true);
         uiSettings.setCompassEnabled(true);
