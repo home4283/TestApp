@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMapOptions;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
@@ -45,8 +46,8 @@ public class park2 extends AppCompatActivity implements OnMapReadyCallback{
         String address = bundle.getString("address");
         Integer img = bundle.getInt("img");
 
-        tvTitle.setText("旅館:"+title);
-        tvContent.setText("簡介:"+content);
+        tvTitle.setText(title);
+        tvContent.setText(content);
         parkImg.setImageResource(img);
         tvAddress.setText("地址:"+address);
 
@@ -80,6 +81,5 @@ public class park2 extends AppCompatActivity implements OnMapReadyCallback{
         uiSettings.setCompassEnabled(true);
         uiSettings.setZoomControlsEnabled(true);
         gmap.moveCamera(CameraUpdateFactory.newLatLng(sydeny));
-
     }
 }

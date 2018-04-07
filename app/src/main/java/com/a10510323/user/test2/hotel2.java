@@ -33,7 +33,7 @@ public class hotel2 extends AppCompatActivity implements OnMapReadyCallback {
         TextView tvTitle = findViewById(R.id.hoteltitle);
         TextView tvContent = findViewById(R.id.hotelcontext);
         TextView tvAddress = findViewById(R.id.hoteladdress);
-        mapView = findViewById(R.id.placemapView);
+        mapView = findViewById(R.id.placemapViewhotel);
         Button car = findViewById(R.id.buttoncarhotel);
 
         Bundle bundle = getIntent().getExtras();
@@ -44,7 +44,7 @@ public class hotel2 extends AppCompatActivity implements OnMapReadyCallback {
         String address = bundle.getString("address");
         Integer img = bundle.getInt("img");
 
-        tvTitle.setText("旅館:"+title);
+        tvTitle.setText(title);
         tvContent.setText("簡介:"+content);
         hotelImg.setImageResource(img);
         tvAddress.setText("地址:"+address);

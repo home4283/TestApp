@@ -28,6 +28,7 @@
                     android:id="@+id/parkimg"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_marginLeft="1dp"
                     android:layout_marginRight="1dp"
                     android:scaleType="centerCrop"
@@ -96,7 +97,10 @@
         <com.google.android.gms.maps.MapView
             android:id="@+id/mapViewpark"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:layout_margin="1dp"
+            />
     </LinearLayout>
 
 </LinearLayout>

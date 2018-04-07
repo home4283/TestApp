@@ -54,7 +54,7 @@ public class Place2 extends AppCompatActivity implements OnMapReadyCallback{
         String address = bundle.getString("address");
         Integer img = bundle.getInt("img");
 
-        tvTitle.setText("景點:"+title);
+        tvTitle.setText(title);
         tvContent.setText("簡介:"+content);
         placeImg.setImageResource(img);
         tvAddress.setText("地址:"+address);
