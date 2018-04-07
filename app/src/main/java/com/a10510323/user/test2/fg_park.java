@@ -33,7 +33,7 @@ public class fg_park extends Fragment{
             if (i == 0) {
                 itempark Itempark = new itempark();
                 Itempark.setPark_title("龜吼停車場");
-                Itempark.setPark_context("總車位數:76"+"\n"+"類型:平面式臨時路外停車場"+"\n"+"收費方式:小型車50元/次"+"\n"+"小型車1500元/月");
+                Itempark.setPark_context("總車位數：76"+"\n"+"類型：平面式臨時路外停車場"+"\n"+"收費方式："+"\n"+"小型車50元/次"+"\n"+"小型車1500元/月");
                 Itempark.setPark_img(R.drawable.park1);
                 Itempark.setPark_address("新北市萬里區龜吼里漁澳81號");
                 Itempark.setDouble1(25.195961);
@@ -44,7 +44,7 @@ public class fg_park extends Fragment{
             else if (i == 1) {
                 itempark Itempark = new itempark();
                 Itempark.setPark_title("野柳停車場");
-                Itempark.setPark_context("總車位數:314"+"\n"+"類型:平面式臨時路外停車場"+"\n"+"收費方式:大型車150元/次"+"\n"+"小型車50元/次"+"\n"+"小型車1500元/月");
+                Itempark.setPark_context("總車位數：314"+"\n"+"類型：平面式臨時路外停車場"+"\n"+"收費方式："+"\n"+"大型車150元/次"+"\n"+"小型車50元/次"+"\n"+"小型車1500元/月");
                 Itempark.setPark_img(R.drawable.park2jpg);
                 Itempark.setPark_address("新北市萬里區野柳里港東路167-1號");
                 Itempark.setDouble1(25.203897);
@@ -54,7 +54,7 @@ public class fg_park extends Fragment{
             else if (i == 2) {
                 itempark Itempark = new itempark();
                 Itempark.setPark_title("野柳海洋世界停車場");
-                Itempark.setPark_context("總車位數:149"+"\n"+"類型:平面式臨時路外停車場"+"\n"+"收費方式:小型車20元/時"+"\n"+"小型車100元/次");
+                Itempark.setPark_context("總車位數：149"+"\n"+"類型：平面式臨時路外停車場"+"\n"+"收費方式："+"\n"+"小型車20元/時"+"\n"+"小型車100元/次");
                 Itempark.setPark_img(R.drawable.park3);
                 Itempark.setPark_address("新北市萬里區野柳里港東路167-3號");
                 Itempark.setDouble1(25.203904);
@@ -64,7 +64,7 @@ public class fg_park extends Fragment{
             else  {
                 itempark Itempark = new itempark();
                 Itempark.setPark_title("萬里行政大樓B1停車場");
-                Itempark.setPark_context("總車位數:35"+"\n"+"類型:立體式建築附設停車空間"+"\n"+"收費方式:小型車20元/時"+"\n"+"小型車1000元/月");
+                Itempark.setPark_context("總車位數：35"+"\n"+"類型：立體式建築附設停車空間"+"\n"+"收費方式："+"\n"+"小型車20元/時"+"\n"+"小型車1000元/月");
                 Itempark.setPark_img(R.drawable.park4);
                 Itempark.setPark_address("新北市萬里區瑪鍊路123號B1");
                 Itempark.setDouble1(25.177423);

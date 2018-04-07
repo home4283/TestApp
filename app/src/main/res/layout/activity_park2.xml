@@ -28,9 +28,6 @@
                     android:id="@+id/parkimg"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="1dp"
-                    android:layout_marginLeft="1dp"
-                    android:layout_marginRight="1dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/park1" />
 
@@ -44,11 +41,12 @@
 
                 <TextView
                     android:id="@+id/parktitle"
+                    android:textStyle="bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
                     android:text="標題"
                     android:textColor="#000"
                     android:textSize="20dp" />
@@ -57,9 +55,10 @@
                     android:id="@+id/parkcontext"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:lineSpacingMultiplier="1.2"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:lineSpacingMultiplier="1.4"
                     android:text="內容"
                     android:textColor="#000"
                     android:textSize="18dp" />
@@ -68,8 +67,10 @@
                     android:id="@+id/parkaddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
                     android:text="地址"
                     android:textAlignment="textEnd"
                     android:textColor="#000"
@@ -78,7 +79,10 @@
                 <Button
                     android:id="@+id/buttoncarpark"
                     android:layout_width="match_parent"
-                    android:layout_height="41dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:text="導航" />
             </LinearLayout>
@@ -89,8 +93,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="1dp"
-        android:layout_marginRight="1dp"
         android:layout_weight="1.1"
         android:orientation="vertical">
 
@@ -99,7 +101,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0"
-            android:layout_margin="1dp"
             />
     </LinearLayout>
 

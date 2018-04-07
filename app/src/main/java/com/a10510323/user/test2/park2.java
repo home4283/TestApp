@@ -49,7 +49,7 @@ public class park2 extends AppCompatActivity implements OnMapReadyCallback{
         tvTitle.setText(title);
         tvContent.setText(content);
         parkImg.setImageResource(img);
-        tvAddress.setText("地址:"+address);
+        tvAddress.setText("地址："+address);
 
         Bundle mapViewBundle = null;
         mapView.onCreate(mapViewBundle);

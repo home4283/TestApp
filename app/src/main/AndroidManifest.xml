@@ -38,8 +38,8 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDeS4r7ssPxGhX-btgvQMWwiS3dFNecA7Q" />
 
-        <activity android:name=".hotel2" />
-        <activity android:name=".park2"></activity>
+        <activity android:name=".hotel2"/>
+        <activity android:name=".park2"/>
     </application>
 
 </manifest>

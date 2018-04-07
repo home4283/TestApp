@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
@@ -18,15 +19,20 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     ImageView imb1,imb2,imb3,imb4;
+    LinearLayout placebutton, hotelbutton, busbutton, parkbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        imb1 = findViewById(R.id.imageView1);
-        imb2 = findViewById(R.id.imageView2);
-        imb3 = findViewById(R.id.imageView3);
-        imb4 = findViewById(R.id.imageView4);
+        //imb1 = findViewById(R.id.imageView1);
+        //imb2 = findViewById(R.id.imageView2);
+        //imb3 = findViewById(R.id.imageView3);
+        //imb4 = findViewById(R.id.imageView4);
+        placebutton = findViewById(R.id.placebutton);
+        hotelbutton = findViewById(R.id.hotelbutton);
+        busbutton = findViewById(R.id.busbutton);
+        parkbutton = findViewById(R.id.parkbutton);
         Banner banner = findViewById(R.id.banner);
         banner.setBannerAnimation(Transformer.ZoomOutSlide);
         banner.setBannerStyle(BannerConfig.NUM_INDICATOR_TITLE);
@@ -53,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         banner.setDelayTime(5000);
         banner.setImages(images);
         banner.start();
-        imb1.setOnClickListener(new View.OnClickListener() {
+        placebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
@@ -61,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        imb2.setOnClickListener(new View.OnClickListener() {
+        hotelbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
@@ -69,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        imb3.setOnClickListener(new View.OnClickListener() {
+        busbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
@@ -77,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        imb4.setOnClickListener(new View.OnClickListener() {
+        parkbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();

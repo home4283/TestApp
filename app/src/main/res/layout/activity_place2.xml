@@ -28,9 +28,6 @@
                     android:id="@+id/placeimg"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="1dp"
-                    android:layout_marginLeft="1dp"
-                    android:layout_marginRight="1dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/place1" />
 
@@ -46,10 +43,11 @@
                     android:id="@+id/placetitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="16dp"
                     android:textSize="20dp"
+                    android:textStyle="bold"
                     android:text="標題"
                     android:textColor="#000" />
 
@@ -57,9 +55,10 @@
                     android:id="@+id/placecontext"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:lineSpacingMultiplier="1.2"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:lineSpacingMultiplier="1.4"
                     android:text="內容"
                     android:textSize="18dp"
                     android:textColor="#000" />
@@ -68,17 +67,22 @@
                     android:id="@+id/placeaddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:textSize="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="16dp"
                     android:text="地址"
                     android:textAlignment="textEnd"
-                    android:textColor="#000" />
+                    android:textColor="#000"
+                    android:textSize="16dp" />
 
                 <Button
                     android:id="@+id/buttoncar"
                     android:layout_width="match_parent"
-                    android:layout_height="41dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:text="導航" />
             </LinearLayout>
@@ -90,16 +94,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1.1"
-        android:layout_marginLeft="1dp"
-        android:layout_marginRight="1dp"
         android:orientation="vertical">
 
         <com.google.android.gms.maps.MapView
             android:id="@+id/placemapView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="0"
-            android:layout_margin="1dp"/>
+            android:layout_weight="0" />
     </LinearLayout>
 
 </LinearLayout>
