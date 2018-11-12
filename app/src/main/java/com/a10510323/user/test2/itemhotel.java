@@ -57,4 +57,13 @@ public class itemhotel implements Serializable {
     public double getDouble2(){
         return this.double2;
     }
+
+    private String hotel_booking;
+    public void setHotel_booking(String hotel_booking){
+        this.hotel_booking = hotel_booking;
+    }
+
+    public String getHotel_booking() {
+        return this.hotel_booking;
+    }
 }

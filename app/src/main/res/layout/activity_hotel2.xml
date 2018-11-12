@@ -79,12 +79,23 @@
                 <Button
                     android:id="@+id/buttoncarhotel"
                     android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     android:layout_marginBottom="8dp"
-                    android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:text="導航" />
+
+                <Button
+                    android:id="@+id/buttonbookinghotel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="0"
+                    android:text="訂房" />
+
             </LinearLayout>
 
         </LinearLayout>

@@ -24,6 +24,7 @@ public class hotel2 extends AppCompatActivity implements OnMapReadyCallback {
     private Double double2;
     private GoogleMap gmap;
     private MapView mapView;
+    private static final String MAP_VIEW_BUNDLE_KEY = "MapViewBundleKey";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,7 @@ public class hotel2 extends AppCompatActivity implements OnMapReadyCallback {
         TextView tvAddress = findViewById(R.id.hoteladdress);
         mapView = findViewById(R.id.placemapViewhotel);
         Button car = findViewById(R.id.buttoncarhotel);
+        Button booking = findViewById(R.id.buttonbookinghotel);
 
         Bundle bundle = getIntent().getExtras();
         title = bundle.getString("title");
@@ -42,6 +44,7 @@ public class hotel2 extends AppCompatActivity implements OnMapReadyCallback {
         double2 = bundle.getDouble("double2");
         String content = bundle.getString("content");
         String address = bundle.getString("address");
+        final String url = bundle.getString("url");
         Integer img = bundle.getInt("img");
 
         tvTitle.setText(title);
@@ -63,6 +66,60 @@ public class hotel2 extends AppCompatActivity implements OnMapReadyCallback {
                 startActivity(intent);
             }
         });
+        booking.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url));
+                startActivity(intent);
+            }
+        });
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        Bundle mapViewBundle = outState.getBundle(MAP_VIEW_BUNDLE_KEY);
+        if (mapViewBundle == null) {
+            mapViewBundle = new Bundle();
+            outState.putBundle(MAP_VIEW_BUNDLE_KEY, mapViewBundle);
+        }
+
+        mapView.onSaveInstanceState(mapViewBundle);
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mapView.onResume();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mapView.onStart();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mapView.onStop();
+    }
+    @Override
+    protected void onPause() {
+        mapView.onPause();
+        super.onPause();
+    }
+    @Override
+    protected void onDestroy() {
+        mapView.onDestroy();
+        super.onDestroy();
+    }
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+        mapView.onLowMemory();
     }
 
     @Override

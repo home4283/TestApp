@@ -38,6 +38,7 @@ public class fg_hotel extends Fragment{
                 Itemhotel.setHotel_address("新北市萬里區瑪鋉路264號");
                 Itemhotel.setDouble1(25.180978);
                 Itemhotel.setDouble2(121.690252);
+                Itemhotel.setHotel_booking("http://www.wh-resort.com/book/");
                 hotel.add(Itemhotel);
 
             }
@@ -49,6 +50,7 @@ public class fg_hotel extends Fragment{
                 Itemhotel.setHotel_address("新北市萬里區港東路162-2號");
                 Itemhotel.setDouble1(25.204170);
                 Itemhotel.setDouble2(121.690331);
+                Itemhotel.setHotel_booking("https://yehliu.inhousehotel.com/");
                 hotel.add(Itemhotel);
             }
             else if (i == 2) {
@@ -59,6 +61,7 @@ public class fg_hotel extends Fragment{
                 Itemhotel.setHotel_address("新北市萬里區大鵬里萬里加投166-1號");
                 Itemhotel.setDouble1(25.215315);
                 Itemhotel.setDouble2(121.643385);
+                Itemhotel.setHotel_booking("https://seagaia.ezhotel.com.tw/");
                 hotel.add(Itemhotel);
             }
             else  {
@@ -69,6 +72,7 @@ public class fg_hotel extends Fragment{
                 Itemhotel.setHotel_address("新北市萬里區翡翠路1號");
                 Itemhotel.setDouble1(25.191114);
                 Itemhotel.setDouble2(121.683844);
+                Itemhotel.setHotel_booking("https://pacifichotel.ezhotel.com.tw/");
                 hotel.add(Itemhotel);
             }
         }

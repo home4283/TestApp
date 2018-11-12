@@ -47,6 +47,41 @@
             android:textAlignment="textStart"
             android:textColor="#000"
             android:textSize="17dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="105dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btroad_hotel"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/carnavigation" />
+
+                <LinearLayout
+                    android:layout_width="5dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"></LinearLayout>
+
+                <Button
+                    android:id="@+id/btbooking_hotel"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/booking" />
+
+            </LinearLayout>
+        </LinearLayout>
+
     </LinearLayout>
 
 
